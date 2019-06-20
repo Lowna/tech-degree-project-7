@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,700&display=swap');
+.app-name {
+	font-size: 1.5em;
+}
+#top p {
+	font-size: 1em;
+	margin-left: 25px;
+}
+#alertNote {
+	transition: 1000ms ease-out;
+}
+h2 {
+	margin-left: 10px;
+}
+.section-title {
+	margin-left: 10px;
+}
+.social-text {
+	display: inline-block;
+	margin: auto;
+}
+.social-text h3 p {
+	text-align: center;
+}
+.social-text h3 {
+	color: #7477bf;
+	font-size: 1.5em;
+}
+.social-text p {
+	color: #666666;
+	font-size: 2em;
+}
+.members {
+	width: 350px;
+}
+.member-email {
+	text-decoration: none;
+	color: #7f82c4;
+}

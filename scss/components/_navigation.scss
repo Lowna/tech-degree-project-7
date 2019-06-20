@@ -1,0 +1,13 @@
+#main-nav {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-basis: 90%;
+	padding: 0 4em 0 4em;
+}
+.nav-bar {
+	list-style: none;
+}
+.nav-bar li {
+	margin-top: 5px;
+}
