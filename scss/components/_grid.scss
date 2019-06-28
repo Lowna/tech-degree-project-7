@@ -1,7 +1,4 @@
-.container {
-	display: grid;
-	grid-template-columns: 100%;
-}
+
 header {
 	display: flex;
 	flex-direction: row;
@@ -72,4 +69,71 @@ header {
 	border: 1px solid #d8d8d8;
 	margin: 1em;
 	padding: 1em;
+}
+
+@media (min-width: 768px) {
+	.container {
+		display: grid; 
+		height: 100vh;
+		grid-template-columns: 125px auto auto;
+		grid-template-rows: auto;
+		grid-template-areas: 
+		'header header header'
+		'nav banner banner'
+		'nav main main'
+		;
+	}
+	.header-container {
+		grid-area: header;
+	}
+	.side-nav-container {
+		grid-area: nav;
+		padding: 0;
+	}
+	.side-nav-container #main-nav { 
+		flex-direction: column;
+		text-align: center;
+		padding: 0;
+	 }
+	 .side-nav-container #main-nav li {
+	 	padding: 1.5em;
+	 }
+	#banner {
+		grid-area: banner;
+	}
+	.section-container {
+		grid-area: main;
+		display: grid;
+		grid-template-columns: repeat(3 1fr);
+		grid-template-rows: auto;
+		grid-template-areas:
+		'daily mobile'
+		'social social'
+		'new recent'
+		'message settings' 
+		;
+	}
+	#social {
+		grid-area: social;
+		display: flex;
+		flex-direction: row;
+	}
+	#daily-traffic {
+		grid-area: daily;
+	}
+	#mobile-traffic {
+		grid-area: mobile;
+	}
+	#new-member {
+		grid-area: new;
+	}
+	#recent-activity {
+		grid-area: recent;
+	}
+	#message-user {
+		grid-area: message;
+	}
+	#settings {
+		grid-area: settings;
+	}
 }

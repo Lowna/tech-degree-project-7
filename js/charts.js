@@ -5,12 +5,19 @@
 			data: {
 				labels: ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31'],
 				datasets: [{
+					label: 'Hourly',
 					data: [
-						2500, 
-						2000, 
+						500,
+						1200,
+						800,
+						1400, 
+						1800,
+						1300, 
+						1600,
 						1500, 
+						800,
 						1000, 
-						500
+						1500
 					],
 					backgroundColor: [
 						'rgba(226, 227, 246, 0.7)',
@@ -25,17 +32,148 @@
 						'rgba(226, 227, 246, 0.7)',
 						'rgba(226, 227, 246, 0.7)'
 					],
-					borderColor: '#a9ace5'
-				}]
+					pointBorderColor: '#7377bf',
+					pointBackgroundColor: '#fff',
+					borderWidth: 1,
+					pointBorderWidth: 10,
+					pointHoverBorderWidth: 10,
+					borderColor: '#a9ace5',
+					lineTension: 0
 				
 			},
-			options: {
-				legend:{
-					display: false
-				}
-			}
+		{
+				label: 'Daily',
+				data: [
+						50,
+						300,
+						150,
+						75, 
+						180,
+						95, 
+						253,
+						25, 
+						120,
+						420, 
+						192
+					],
+					hidden:true,
+					backgroundColor: [
+						'rgba(226, 227, 246, 0.7)',
+						'rgba(226, 227, 246, 0.7)',
+						'rgba(226, 227, 246, 0.7)',
+						'rgba(226, 227, 246, 0.7)',
+						'rgba(226, 227, 246, 0.7)',
+						'rgba(226, 227, 246, 0.7)',
+						'rgba(226, 227, 246, 0.7)',
+						'rgba(226, 227, 246, 0.7)',
+						'rgba(226, 227, 246, 0.7)',
+						'rgba(226, 227, 246, 0.7)',
+						'rgba(226, 227, 246, 0.7)'
+					],
+					pointBorderColor: '#7377bf',
+					pointBackgroundColor: '#fff',
+					borderWidth: 1,
+					pointBorderWidth: 10,
+					pointHoverBorderWidth: 10,
+					borderColor: '#a9ace5',
+					lineTension: 0
+		},
+		{
+				label: 'Weekly',
+				data: [
+						200,
+						400,
+						600,
+						800, 
+						1000,
+						1200, 
+						1400,
+						1600, 
+						1800,
+						2000, 
+						2200
+					],
+					hidden:true,
+					backgroundColor: [
+						'rgba(226, 227, 246, 0.7)',
+						'rgba(226, 227, 246, 0.7)',
+						'rgba(226, 227, 246, 0.7)',
+						'rgba(226, 227, 246, 0.7)',
+						'rgba(226, 227, 246, 0.7)',
+						'rgba(226, 227, 246, 0.7)',
+						'rgba(226, 227, 246, 0.7)',
+						'rgba(226, 227, 246, 0.7)',
+						'rgba(226, 227, 246, 0.7)',
+						'rgba(226, 227, 246, 0.7)',
+						'rgba(226, 227, 246, 0.7)'
+					],
+					pointBorderColor: '#7377bf',
+					pointBackgroundColor: '#fff',
+					borderWidth: 1,
+					pointBorderWidth: 10,
+					pointHoverBorderWidth: 10,
+					borderColor: '#a9ace5',
+					lineTension: 0
 			
-		});
+		},
+		{
+				label: 'Monthly',
+				data: [
+						1000,
+						1200,
+						1300,
+						1400, 
+						1500,
+						1600, 
+						1700,
+						1800, 
+						1900,
+						2000, 
+						2100
+					],
+					hidden:true,
+					backgroundColor: [
+						'rgba(226, 227, 246, 0.7)',
+						'rgba(226, 227, 246, 0.7)',
+						'rgba(226, 227, 246, 0.7)',
+						'rgba(226, 227, 246, 0.7)',
+						'rgba(226, 227, 246, 0.7)',
+						'rgba(226, 227, 246, 0.7)',
+						'rgba(226, 227, 246, 0.7)',
+						'rgba(226, 227, 246, 0.7)',
+						'rgba(226, 227, 246, 0.7)',
+						'rgba(226, 227, 246, 0.7)',
+						'rgba(226, 227, 246, 0.7)'
+					],
+					pointBorderColor: '#7377bf',
+					pointBackgroundColor: '#fff',
+					borderWidth: 1,
+					pointBorderWidth: 10,
+					pointHoverBorderWidth: 10,
+					borderColor: '#a9ace5',
+					lineTension: 0
+
+				}
+			]
+		},
+/////////////////////////////////////////////////////////////////////////////			
+			options: {
+
+				responsive:true,
+				aspectRatio:1,
+				scales: {
+					yAxes: [{
+						ticks: {
+							beginAtZero: true
+		                }
+            	}]
+	        },
+
+			legend: {
+				display: true
+			}
+   	 }
+});
 //end line chart/////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //this is the bar chart//////////////////////////////////////////////////////////////////////////////////////////////////
@@ -46,11 +184,13 @@ var dailyTraffic = new Chart(barChart, {
 		labels: ['S', 'M', 'T', 'W', 'Th', 'F', 'S'],
 		datasets: [{
 			data: [
-				250, 
-				200, 
-				150, 
+				50, 
 				100, 
-				50
+				175, 
+				125, 
+				225,
+				190,
+				75
 			],
 			backgroundColor: [
 				'rgba(115, 119, 191)',
@@ -66,6 +206,13 @@ var dailyTraffic = new Chart(barChart, {
 		
 	},
 	options: {
+		scales: {
+					yAxes: [{
+						ticks: {
+							beginAtZero: true
+		                }
+            	}]
+	        },
 		legend:{
 			display: false
 		}
@@ -101,8 +248,9 @@ var mobileTraffic = new Chart(pieChart, {
 			text: 'Daily Traffic',
 			fontSize:25,
 		},
+
 		legend:{
-			display: false
+			position: 'right'
 		}
 	}
 	

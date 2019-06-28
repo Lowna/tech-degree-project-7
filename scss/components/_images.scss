@@ -2,9 +2,30 @@
 	width: 30px;
 	margin-bottom: 10px;
 }
+#shakeBell:hover {
+	animation: shakeBell 1s ease-in;  
+}
+@keyframes shakeBell {
+	  0% { transform: rotate(0); }
+	  15% { transform: rotate(5deg); }
+	  30% { transform: rotate(-5deg); }
+	  45% { transform: rotate(4deg); }
+	  60% { transform: rotate(-4deg); }
+	  75% { transform: rotate(2deg); }
+	  85% { transform: rotate(-2deg); }
+	  92% { transform: rotate(1deg); }
+	  100% { transform: rotate(0); }
+}
+
 .icon-nav {
 	width: 40px;
-	color: #757592;
+	padding: 1em;
+}
+#main-nav li a .icon-nav:hover {
+	color: #fff;
+	border-left: 3px solid #85db80;
+	border-right: 3px solid #85db80;
+	border-radius: 3px;
 }
 .circle {
 	position: relative;
@@ -48,4 +69,12 @@
 .fa-chevron-right {
 	margin: 30px 0 0 60px;
 	color: #7478bf;
+}
+@media (min-width: 768px) {
+#main-nav li a .icon-nav:hover {
+	color: #fff;
+	border-left: 3px solid #85db80;
+	border-right: 0;
+	border-radius: 3px;
+}
 }

@@ -184,11 +184,6 @@ select {
   text-transform: none;
 }
 
-.container {
-  display: grid;
-  grid-template-columns: 100%;
-}
-
 header {
   display: flex;
   flex-direction: row;
@@ -272,6 +267,76 @@ header {
   padding: 1em;
 }
 
+@media (min-width: 768px) {
+  .container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 125px auto auto;
+    grid-template-rows: auto;
+    grid-template-areas: "header header header" "nav banner banner" "nav main main";
+  }
+
+  .header-container {
+    grid-area: header;
+  }
+
+  .side-nav-container {
+    grid-area: nav;
+    padding: 0;
+  }
+
+  .side-nav-container #main-nav {
+    flex-direction: column;
+    text-align: center;
+    padding: 0;
+  }
+
+  .side-nav-container #main-nav li {
+    padding: 1.5em;
+  }
+
+  #banner {
+    grid-area: banner;
+  }
+
+  .section-container {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(3 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: "daily mobile" "social social" "new recent" "message settings";
+  }
+
+  #social {
+    grid-area: social;
+    display: flex;
+    flex-direction: row;
+  }
+
+  #daily-traffic {
+    grid-area: daily;
+  }
+
+  #mobile-traffic {
+    grid-area: mobile;
+  }
+
+  #new-member {
+    grid-area: new;
+  }
+
+  #recent-activity {
+    grid-area: recent;
+  }
+
+  #message-user {
+    grid-area: message;
+  }
+
+  #settings {
+    grid-area: settings;
+  }
+}
 #main-nav {
   display: flex;
   flex-direction: row;
@@ -437,9 +502,49 @@ fieldset {
   margin-bottom: 10px;
 }
 
+#shakeBell:hover {
+  animation: shakeBell 1s ease-in;
+}
+
+@keyframes shakeBell {
+  0% {
+    transform: rotate(0);
+  }
+  15% {
+    transform: rotate(5deg);
+  }
+  30% {
+    transform: rotate(-5deg);
+  }
+  45% {
+    transform: rotate(4deg);
+  }
+  60% {
+    transform: rotate(-4deg);
+  }
+  75% {
+    transform: rotate(2deg);
+  }
+  85% {
+    transform: rotate(-2deg);
+  }
+  92% {
+    transform: rotate(1deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
 .icon-nav {
   width: 40px;
-  color: #757592;
+  padding: 1em;
+}
+
+#main-nav li a .icon-nav:hover {
+  color: #fff;
+  border-left: 3px solid #85db80;
+  border-right: 3px solid #85db80;
+  border-radius: 3px;
 }
 
 .circle {
@@ -493,8 +598,17 @@ fieldset {
   color: #7478bf;
 }
 
+@media (min-width: 768px) {
+  #main-nav li a .icon-nav:hover {
+    color: #fff;
+    border-left: 3px solid #85db80;
+    border-right: 0;
+    border-radius: 3px;
+  }
+}
 .app-name {
   font-size: 1.5em;
+  margin-left: 15px;
 }
 
 #top p {
@@ -502,7 +616,7 @@ fieldset {
   margin-left: 25px;
 }
 
-#alertNote {
+#alertNote p {
   transition: 1000ms ease-out;
 }
 
