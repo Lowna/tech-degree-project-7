@@ -1,4 +1,15 @@
-
+.web-chart-container {
+	max-height: 31.25em;
+	height: 31.25em;
+}
+#dropdown {
+	background: #7477bf;
+	color: #fff;
+	padding: 1em;
+	border: 1px solid #fff;
+	display: none;
+	position: absolute;
+}
 header {
 	display: flex;
 	flex-direction: row;

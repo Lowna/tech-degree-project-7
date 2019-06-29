@@ -16,8 +16,8 @@
 			<h1 class="app-name">Your<em>App&#8482;</em></h1>
 			<div id="notification">
 				<span><img class="bell" id="shakeBell" src="icons/icon-bell.svg"></span>
-					<svg class="circle" height="100" width="100">
-	  				<circle cx="10" cy="10" r="4" fill="#F31431" />
+					<svg id="circleSvg" height="12" width="12">
+	  				<circle id="circle" cx="10" cy="10" r="4" fill="#F31431" />
 					</svg>
 			</div>
 			<img src="images/member-1.jpg" id="avatar"> 
@@ -35,7 +35,18 @@
 		</aside>
 		<!--nav section 2---------->
 		<!--section container section 3---------->
-		
+		<!--dropdown notification menu -->
+		<div id="dropdown">
+			<ol>
+				<li>a</li>
+				<li>b</li>
+				<li>c</li>
+			</ol>
+		</div>
+
+
+
+		<!--end dropdown menu-->
 		<section class="base-section" id="banner">
 			<h2>Dashboard</h2>
 			<div id="searchBar">
@@ -49,7 +60,7 @@
 			<h3 class="section-title">Traffic</h3>
 			<!--this is a line chart-->
 			<div class="web-chart-container">
-				<canvas id="webTraffic" width='100' height='100'></canvas>
+				<canvas id="webTraffic" width='100' ></canvas>
 			</div>
 		</section>
 		<div class="section-container">
@@ -209,6 +220,10 @@
 						<fieldset class="message-user">
 							<div class="form-container">
 								<input type="text" id="user" placeholder="search for user" required>
+								<div id="autoComplete">
+									<ol id="autoCompleteResults">
+									</ol>
+								</div>
 								 <textarea name="user_topics" id="topic" cols="30" rows="10" placeholder="message for user"></textarea>
 								 <button type="submit">send</button>
 							</div>
@@ -221,14 +236,14 @@
 							<div class="settings-container">
 							<div class="on-off-switch">
 								<p class="on-off-choice">Send Email Notifications</p>
-								<div class="toggle-btn" onClick="this.classList.toggle('active')">
+								<div id="profileEmail" class="toggle-btn">
 									<div class="inner-circle"></div>
 									<p class="on">on</p>
 								</div>
 							</div>
 							<div class="on-off-switch">
 								<p class="on-off-choice">Set Profile to Public</p>
-								<div class="toggle-btn" onClick="this.classList.toggle('active')">
+								<div id="profilePublic" class="toggle-btn">
 									<div class="inner-circle"></div>
 									<p class="on">on</p>
 								</div>
@@ -288,7 +303,9 @@
 	<script type="text/tavascript" src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous">"></script>
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
 	<script type="text/javascript" src="js/alert.js"></script>
+	<script type="text/javascript" src="js/localstorage.js"></script>
 	<script type="text/javascript" src="js/dropdown.js"></script>
+	<script type="text/javascript" src="js/autoComplete.js"></script>
 	<script type="text/javascript" src="js/charts.js"></script>
 </body>
 </html>

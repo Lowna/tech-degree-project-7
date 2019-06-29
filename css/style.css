@@ -184,6 +184,20 @@ select {
   text-transform: none;
 }
 
+.web-chart-container {
+  max-height: 31.25em;
+  height: 31.25em;
+}
+
+#dropdown {
+  background: #7477bf;
+  color: #fff;
+  padding: 1em;
+  border: 1px solid #fff;
+  display: none;
+  position: absolute;
+}
+
 header {
   display: flex;
   flex-direction: row;
@@ -547,13 +561,12 @@ fieldset {
   border-radius: 3px;
 }
 
-.circle {
+#circleSvg {
   position: relative;
   right: 15px;
   height: 20px;
   width: 20px;
-  padding-bottom: 30px;
-  margin-bottom: 5px;
+  margin-bottom: 30px;
 }
 
 #avatar {

@@ -32,6 +32,7 @@
 						'rgba(226, 227, 246, 0.7)',
 						'rgba(226, 227, 246, 0.7)'
 					],
+
 					pointBorderColor: '#7377bf',
 					pointBackgroundColor: '#fff',
 					borderWidth: 1,
@@ -158,7 +159,7 @@
 		},
 /////////////////////////////////////////////////////////////////////////////			
 			options: {
-
+				maintainAspectRatio: false,
 				responsive:true,
 				aspectRatio:1,
 				scales: {
