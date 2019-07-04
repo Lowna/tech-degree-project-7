@@ -1,5 +1,6 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,300i,400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i");
 body {
+  font-family: "Roboto", sans-serif;
   color: #676666;
   line-height: 1.6;
   font-size: 16px;
@@ -184,20 +185,6 @@ select {
   text-transform: none;
 }
 
-.web-chart-container {
-  max-height: 31.25em;
-  height: 31.25em;
-}
-
-#dropdown {
-  background: #7477bf;
-  color: #fff;
-  padding: 1em;
-  border: 1px solid #fff;
-  display: none;
-  position: absolute;
-}
-
 header {
   display: flex;
   flex-direction: row;
@@ -206,13 +193,40 @@ header {
 }
 
 .header-container {
-  background-color: #7477bf;
+  background-color: #7377bf;
   color: #fff;
   padding: 10px;
 }
+.header-container .app-name em {
+  font-weight: 300;
+}
 
 .app-name {
-  flex-grow: 2;
+  flex-grow: 5;
+}
+
+#searchBar {
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  margin: 15px;
+}
+#searchBar input {
+  flex-grow: 1;
+  padding: 10px;
+  border: none;
+  background: #fff;
+  color: #dbdbdb;
+}
+#searchBar button {
+  border: none;
+  background: #fff;
+}
+#searchBar button i {
+  border: none;
+  background: #fff;
+  color: #5e62bf;
 }
 
 #top {
@@ -249,6 +263,27 @@ header {
   margin-left: 20px;
 }
 
+.base-section {
+  border: 1px solid #d8d8d8;
+  padding: 1em;
+}
+
+#dropdown {
+  background: #7377bf;
+  color: #fff;
+  width: 20%;
+  padding: 1.5em;
+  border: 1px solid #fff;
+  display: none;
+  position: absolute;
+}
+#dropdown li {
+  width: 80%;
+  list-style: none;
+  padding: 1em;
+  border-bottom: 2px solid #fff;
+}
+
 .social-widget {
   background: #fbfbfb;
   border: 1px solid #d1d1d1;
@@ -256,6 +291,17 @@ header {
   flex-direction: row;
   padding: 1em;
   margin: 1em;
+}
+
+.web-chart-container {
+  max-height: 28em;
+  height: 25em;
+  padding: 2em;
+}
+
+.square-chart-container {
+  height: 40vh;
+  padding: 2em;
 }
 
 .member-container {
@@ -271,16 +317,6 @@ header {
   width: 300px;
 }
 
-.save-cancel-container {
-  display: flex;
-}
-
-.base-section {
-  border: 1px solid #d8d8d8;
-  margin: 1em;
-  padding: 1em;
-}
-
 @media (min-width: 768px) {
   .container {
     display: grid;
@@ -292,6 +328,9 @@ header {
 
   .header-container {
     grid-area: header;
+  }
+  .header-container .app-name em {
+    font-weight: 300;
   }
 
   .side-nav-container {
@@ -350,6 +389,27 @@ header {
   #settings {
     grid-area: settings;
   }
+
+  #searchContainer {
+    display: flex;
+  }
+  #searchContainer h2 {
+    padding-right: 1em;
+    padding-left: 1em;
+  }
+  #searchContainer #searchWrap {
+    flex-grow: 1;
+    background: #fbfbfb;
+    border: 1px solid #d8d8d8;
+  }
+  #searchContainer #searchBar {
+    float: right;
+    width: 30%;
+  }
+
+  .social-widget {
+    flex-grow: 1;
+  }
 }
 #main-nav {
   display: flex;
@@ -367,33 +427,28 @@ header {
   margin-top: 5px;
 }
 
-#searchBar {
-  border: 1px solid #dbdbdb;
-  border-radius: 5px;
-  display: flex;
-  justify-content: center;
-  margin: 15px;
+.icon-nav {
+  width: 40px;
+  padding: 1em;
 }
 
-#searchBar input {
-  flex-grow: 1;
-  padding: 10px;
-  border: none;
-  background: #fff;
-  color: #dbdbdb;
+#main-nav li a .icon-nav:hover {
+  color: #fff;
+  border-bottom: 3px solid #85db80;
+  border-radius: 3px;
+  transition: 300ms ease-out;
 }
 
-#searchBar button {
-  border: none;
-  background: #fff;
+@media (min-width: 768px) {
+  #main-nav li a .icon-nav:hover {
+    color: #fff;
+    border-bottom: none;
+    border-left: 3px solid #85db80;
+    border-right: 0;
+    border-radius: 3px;
+    transition: 300ms ease-out;
+  }
 }
-
-#searchBar button i {
-  border: none;
-  background: #fff;
-  color: #5e62bf;
-}
-
 .on-off-choice {
   margin-left: 10px;
 }
@@ -440,6 +495,32 @@ header {
   margin-left: 50px;
 }
 
+.save-cancel-container {
+  display: flex;
+}
+
+#cancel {
+  flex-basis: 50%;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 1em;
+  margin: 0.5em;
+  text-transform: uppercase;
+  background: #b2b2b2;
+}
+
+#save {
+  flex-basis: 50%;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 1em;
+  margin: 0.5em;
+  text-transform: uppercase;
+  background: #7377bf;
+}
+
 fieldset {
   border: none;
 }
@@ -449,7 +530,6 @@ fieldset {
   flex-direction: column;
   padding: 1em;
 }
-
 .form-container input {
   border: 1px solid #d1d1d1;
   background: #fbfbfb;
@@ -457,7 +537,6 @@ fieldset {
   padding: 1em;
   margin-bottom: 10px;
 }
-
 .form-container textarea {
   border: 1px solid #d1d1d1;
   background: #fbfbfb;
@@ -465,7 +544,6 @@ fieldset {
   padding: 2em;
   margin-bottom: 10px;
 }
-
 .form-container button {
   background: #7377bf;
   color: #fff;
@@ -478,28 +556,6 @@ fieldset {
 .settings-container {
   display: flex;
   flex-direction: column;
-}
-
-#cancel {
-  flex-basis: 50%;
-  background: #b2b2b2;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  padding: 1em;
-  margin: 0.5em;
-  text-transform: uppercase;
-}
-
-#save {
-  flex-basis: 50%;
-  background: #7377bf;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  padding: 1em;
-  margin: 0.5em;
-  text-transform: uppercase;
 }
 
 #timezone-offset {
@@ -549,24 +605,14 @@ fieldset {
     transform: rotate(0);
   }
 }
-.icon-nav {
-  width: 40px;
-  padding: 1em;
-}
-
-#main-nav li a .icon-nav:hover {
-  color: #fff;
-  border-left: 3px solid #85db80;
-  border-right: 3px solid #85db80;
-  border-radius: 3px;
-}
-
 #circleSvg {
-  position: relative;
-  right: 15px;
+  margin-bottom: 40px;
+  padding-right: 10px;
+}
+
+.circle {
   height: 20px;
   width: 20px;
-  margin-bottom: 30px;
 }
 
 #avatar {
@@ -574,6 +620,20 @@ fieldset {
   width: 50px;
   margin-left: 10px;
   margin-right: 10px;
+}
+
+.member-img {
+  border-radius: 50%;
+  width: 50px;
+  margin-top: 20px;
+}
+
+.img-container {
+  padding-right: 15px;
+}
+
+.post-img {
+  margin-top: 15px;
 }
 
 .social-icons {
@@ -591,34 +651,11 @@ fieldset {
   margin-left: 8px;
 }
 
-.img-container {
-  padding-right: 15px;
-}
-
-.member-img {
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  margin-top: 20px;
-}
-
-.post-img {
-  margin-top: 15px;
-}
-
 .fa-chevron-right {
   margin: 30px 0 0 60px;
   color: #7478bf;
 }
 
-@media (min-width: 768px) {
-  #main-nav li a .icon-nav:hover {
-    color: #fff;
-    border-left: 3px solid #85db80;
-    border-right: 0;
-    border-radius: 3px;
-  }
-}
 .app-name {
   font-size: 1.5em;
   margin-left: 15px;
@@ -651,7 +688,7 @@ h2 {
 }
 
 .social-text h3 {
-  color: #7477bf;
+  color: #7377bf;
   font-size: 1.5em;
 }
 

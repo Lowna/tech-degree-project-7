@@ -1,3 +1,4 @@
+//bell notification/////////////////////////////////////////////////////////////////////////////////
 .bell {
 	width: 30px;
 	margin-bottom: 10px;
@@ -16,65 +17,47 @@
 	  92% { transform: rotate(1deg); }
 	  100% { transform: rotate(0); }
 }
-
-.icon-nav {
-	width: 40px;
-	padding: 1em;
-}
-#main-nav li a .icon-nav:hover {
-	color: #fff;
-	border-left: 3px solid #85db80;
-	border-right: 3px solid #85db80;
-	border-radius: 3px;
+#circleSvg {
+	margin-bottom: 40px;
+	padding-right: 10px;
 }
 .circle {
-	position: relative;
-	right: 15px;
 	height: 20px;
 	width: 20px;
-	padding-bottom: 30px;
-	margin-bottom: 5px;
 }
+//bell notification/////////////////////////////////////////////////////////////////////////////
+
+//images///////////////////////////////////////////////////////////////////////////////////////
 #avatar {
-	border-radius: 50%;
-	width: 50px;
+	@include image-avatar;
 	margin-left: 10px;
 	margin-right: 10px;
 }
+.member-img {
+	@include image-avatar;
+	margin-top: 20px;
+}
+.img-container {
+	padding-right: 15px;
+}
+
+.post-img {
+	margin-top: 15px;
+}
+
+//images///////////////////////////////////////////////////////////////////////////////////////
+
+//social media/////////////////////////////////////////////////////////////////////////////////
 .social-icons {
-	width: 70px;
-	height: 70px;
-	background: #7377bf;
-	overflow: visible;
-	border-radius: 50%;
-	margin: auto 0;
+	@include social-icons;
 }
 .social-icons svg {
 	height: 50px;
 	margin-top: 15%;
 	margin-left: 8px;
 }
-.img-container {
-	padding-right: 15px;
-}
-.member-img {
-	border-radius: 50%;
-	width: 50px;
-	height: 50px;
-	margin-top: 20px;
-}
-.post-img {
-	margin-top: 15px;
-}
+//social media/////////////////////////////////////////////////////////////////////////////////
 .fa-chevron-right {
 	margin: 30px 0 0 60px;
-	color: #7478bf;
-}
-@media (min-width: 768px) {
-#main-nav li a .icon-nav:hover {
-	color: #fff;
-	border-left: 3px solid #85db80;
-	border-right: 0;
-	border-radius: 3px;
-}
+	color: $toggleChev;
 }

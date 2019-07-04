@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
 .app-name {
 	font-size: 1.5em;
 	margin-left: 15px;
@@ -24,11 +24,11 @@ h2 {
 	text-align: center;
 }
 .social-text h3 {
-	color: #7477bf;
+	color: $sendSaveAlert;
 	font-size: 1.5em;
 }
 .social-text p {
-	color: #666666;
+	color: $socialtxt;
 	font-size: 2em;
 }
 .members {
@@ -36,5 +36,5 @@ h2 {
 }
 .member-email {
 	text-decoration: none;
-	color: #7f82c4;
+	color: $memberEmail;
 }

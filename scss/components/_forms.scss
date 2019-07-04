@@ -1,67 +1,24 @@
+//form////////////////////////////////////////////////////////////////////////////////
 fieldset {
 	border: none;
 }
 .form-container {
-	display: flex;
-	flex-direction: column;
-	padding: 1em;
+	@include form;
+}
 
-}
-.form-container input {
-	border: 1px solid #d1d1d1;
-	background: #fbfbfb;
-	border-radius: 5px;
-	padding: 1em;
-	margin-bottom: 10px;
-}
-.form-container textarea {
-	border: 1px solid #d1d1d1;
-	background: #fbfbfb;
-	border-radius: 5px;
-	padding: 2em;
-	margin-bottom: 10px;
+//form////////////////////////////////////////////////////////////////////////////////
 
-}
-.form-container button {
-	background: #7377bf;
-	color: #fff;
-	border: none;
-	border-radius: 5px;
-	padding: 1em;
-	text-transform: uppercase;
-}
-//settings///////////////////////////////////////////////////////////////////////
+//settings////////////////////////////////////////////////////////////////////////////
+
 .settings-container {
 	display: flex;
 	flex-direction: column;
 }
-#cancel {
-	flex-basis: 50%;
-	background: #b2b2b2;
-	color: #fff;
-	border: none;
-	border-radius: 5px;
-	padding: 1em;
-	margin: 0.5em;
-	text-transform: uppercase;
-}
-#save {
-	flex-basis: 50%;
-	background: #7377bf;
-	color: #fff;
-	border: none;
-	border-radius: 5px;
-	padding: 1em;
-	margin: 0.5em;
-	text-transform: uppercase;
-}
 #timezone-offset {
-	border: 1px solid #d1d1d1;
-	background: #fbfbfb;
-	color: #828282;
+	border: 1px solid $inputBorder;
+	background: $inputBackground;
+	color: $timezoneTxtColor;
 	border-radius: 5px;
 	padding: 1em;
 	margin: 0.5em;
-
-
 }

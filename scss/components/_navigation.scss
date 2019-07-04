@@ -11,3 +11,23 @@
 .nav-bar li {
 	margin-top: 5px;
 }
+.icon-nav {
+	width: 40px;
+	padding: 1em;
+}
+#main-nav li a .icon-nav:hover {
+	color: $white;
+	border-bottom: 3px solid $navBrdr;
+	border-radius: 3px;
+	transition: 300ms ease-out;
+}
+@media (min-width: 768px) {
+	#main-nav li a .icon-nav:hover {
+		color: $white;
+		border-bottom: none;
+		border-left: 3px solid $navBrdr;
+		border-right: 0;
+		border-radius: 3px;
+		transition: 300ms ease-out;
+	}
+}

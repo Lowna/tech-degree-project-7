@@ -1,15 +1,4 @@
-.web-chart-container {
-	max-height: 31.25em;
-	height: 31.25em;
-}
-#dropdown {
-	background: #7477bf;
-	color: #fff;
-	padding: 1em;
-	border: 1px solid #fff;
-	display: none;
-	position: absolute;
-}
+//header///////////////////////////////////////////////////////////////////////////////////////
 header {
 	display: flex;
 	flex-direction: row;
@@ -17,29 +6,36 @@ header {
 	align-items: center;
 }
 .header-container {
-	background-color: #7477bf;
-	color: #fff;
+	background-color: $socialIconBackground;
+	color: $white;
 	padding: 10px;
+	.app-name em {
+		font-weight: 300;
+	}
 }
 .app-name {
-	flex-grow: 2;
+	flex-grow: 5;
 }
-
+//search bar////////////////////////////////////////////////////////////////////////////////////
+#searchBar {
+	@include search-bar;
+}
+//search bar////////////////////////////////////////////////////////////////////////////////////
 #top {
 	flex-grow: 1;
 	padding-left: 5px;
 }
 .side-nav-container {
-	background-color: #4d4c72;
-	color: #fff;
+	background-color: $sideNav;
+	color: $white;
 	padding: 10px;
 }
 #notification {
-	border-right: 3px solid #5d61bf;
+	border-right: 3px solid $headerIcnBrdr;
 }
 #alertNote {
-	background: #7377bf;
-	color: #fff;
+	background: $sendSaveAlert;
+	color: $white;
 	padding: 1em;
 	display: flex;
 	justify-content: center;
@@ -53,18 +49,55 @@ header {
 #alertClose {
 	margin-left: 20px;
 }
+//header///////////////////////////////////////////////////////////////////////////////////////////////
+
+//base sections///////////////////////////////////////////////////////////////////////////////////////
+.base-section {
+	border: 1px solid #d8d8d8;
+	padding: 1em;
+}
+//notification dropdown/////////////////////////////////////////////////////////////////////////////////
+#dropdown {
+	background: $sendSaveAlert;
+	color: $white;
+	width: 20%;
+	padding: 1.5em;
+	border: 1px solid $white;
+	display: none;
+	position: absolute;
+	li {
+		width: 80%;
+		list-style: none;
+		padding: 1em;
+		border-bottom: 2px solid $white;
+	}
+}
+//notification dropdown/////////////////////////////////////////////////////////////////////////////////
+
 .social-widget {
-	background: #fbfbfb;
-	border: 1px solid #d1d1d1;
+	background: $inputBackground;
+	border: 1px solid $inputBorder;
 	display: flex;
 	flex-direction: row;
 	padding: 1em;
 	margin: 1em;
 
 }
+//chart js /////////////////////////////////////////////////////////////////////////////////////////////
+.web-chart-container {
+	max-height: 28em;
+	height: 25em;
+	padding: 2em;
+}
+.square-chart-container {
+	height: 40vh;
+	padding: 2em;
+}
+
+//members area//////////////////////////////////////////////////////////////////////////////////////////
 .member-container {
 	display: flex;
-	border-bottom: 1px solid #e9e9e9;
+	border-bottom: 1px solid $memberContainer;
 }
 .date-joined {
 	margin-top: 30px;
@@ -72,17 +105,10 @@ header {
 .member-posts {
 	width: 300px;
 }
-.save-cancel-container {
-	display: flex;
-}
-//------------------for sections
-.base-section {
-	border: 1px solid #d8d8d8;
-	margin: 1em;
-	padding: 1em;
-}
+//members area//////////////////////////////////////////////////////////////////////////////////////////
 
 @media (min-width: 768px) {
+//grid/////////////////////////////////////////////////////////////////////////////////////////////////
 	.container {
 		display: grid; 
 		height: 100vh;
@@ -96,6 +122,9 @@ header {
 	}
 	.header-container {
 		grid-area: header;
+		.app-name em {
+			font-weight: 300;
+		}
 	}
 	.side-nav-container {
 		grid-area: nav;
@@ -147,4 +176,24 @@ header {
 	#settings {
 		grid-area: settings;
 	}
+//grid/////////////////////////////////////////////////////////////////////////////////////////////////
+#searchContainer {
+	display: flex;
+	h2 {
+		padding-right: 1em;
+		padding-left: 1em;
+	}
+	#searchWrap {
+	flex-grow: 1;
+	background: $inputBackground;
+	border: 1px solid #d8d8d8;
+	}
+	#searchBar {
+		float: right;
+		width: 30%;
+	}
+}
+.social-widget {
+	flex-grow: 1;
+}
 }

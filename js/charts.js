@@ -207,6 +207,9 @@ var dailyTraffic = new Chart(barChart, {
 		
 	},
 	options: {
+		maintainAspectRatio: false,
+		responsive:true,
+		aspectRatio:1,
 		scales: {
 					yAxes: [{
 						ticks: {
@@ -244,6 +247,9 @@ var mobileTraffic = new Chart(pieChart, {
 		
 	},
 	options: {
+		maintainAspectRatio: false,
+		responsive:true,
+		aspectRatio:1,
 		title:{
 			display: true,
 			text: 'Daily Traffic',
