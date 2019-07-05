@@ -53,7 +53,7 @@ header {
 
 //base sections///////////////////////////////////////////////////////////////////////////////////////
 .base-section {
-	border: 1px solid #d8d8d8;
+	border: 1px solid $base-brdr-color;
 	padding: 1em;
 }
 //notification dropdown/////////////////////////////////////////////////////////////////////////////////
@@ -65,11 +65,19 @@ header {
 	border: 1px solid $white;
 	display: none;
 	position: absolute;
-	li {
-		width: 80%;
-		list-style: none;
-		padding: 1em;
-		border-bottom: 2px solid $white;
+	ol {
+		padding-right: 2em;
+		margin: auto;
+		li {
+			width: 100%;
+			list-style: none;
+			padding: 1em;
+			border-bottom: 2px solid $white;
+		}
+	li:hover {
+			background: $btn-hover;
+			transition: 0.5s ease-in;
+	}
 	}
 }
 //notification dropdown/////////////////////////////////////////////////////////////////////////////////

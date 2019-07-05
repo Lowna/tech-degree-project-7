@@ -277,11 +277,19 @@ header {
   display: none;
   position: absolute;
 }
-#dropdown li {
-  width: 80%;
+#dropdown ol {
+  padding-right: 2em;
+  margin: auto;
+}
+#dropdown ol li {
+  width: 100%;
   list-style: none;
   padding: 1em;
   border-bottom: 2px solid #fff;
+}
+#dropdown ol li:hover {
+  background: #8c8840;
+  transition: 0.5s ease-in;
 }
 
 .social-widget {
@@ -432,6 +440,10 @@ header {
   padding: 1em;
 }
 
+#main-nav li a .icon-nav img:active {
+  color: #fff;
+}
+
 #main-nav li a .icon-nav:hover {
   color: #fff;
   border-bottom: 3px solid #85db80;
@@ -464,6 +476,7 @@ header {
   margin-top: 10px;
   margin-right: 25px;
   background-color: #7478bf;
+  border: 2px solid #dcdbd7;
   border-radius: 30px;
   padding: 5px;
   transition: 300ms ease-in-out;
@@ -479,9 +492,10 @@ header {
 }
 
 .toggle-btn .inner-circle {
-  width: 25px;
-  height: 25px;
+  width: 23px;
+  height: 23px;
   background-color: #fff;
+  border: 2px solid #dcdbd7;
   border-radius: 50%;
   margin-left: 3px;
   transition: 300ms ease-in-out;
@@ -521,6 +535,16 @@ header {
   background: #7377bf;
 }
 
+#cancel:hover {
+  background: #4d4d4d;
+  transition: 0.5s ease-in;
+}
+
+#save:hover {
+  background: #8c8840;
+  transition: 0.5s ease-in;
+}
+
 fieldset {
   border: none;
 }
@@ -551,6 +575,10 @@ fieldset {
   border-radius: 5px;
   padding: 1em;
   text-transform: uppercase;
+}
+.form-container button:hover {
+  background: #8c8840;
+  transition: 0.5s ease-in;
 }
 
 .settings-container {
@@ -607,7 +635,7 @@ fieldset {
 }
 #circleSvg {
   margin-bottom: 40px;
-  padding-right: 10px;
+  padding-right: 15px;
 }
 
 .circle {

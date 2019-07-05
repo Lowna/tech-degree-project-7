@@ -36,6 +36,10 @@
 		padding: 1em;
 		text-transform: uppercase;
 	}
+	button:hover {
+		background: $btn-hover;
+		transition: 0.5s ease-in; 
+	}
 }
 @mixin save-cancel-btn {
 	flex-basis: 50%;
@@ -70,8 +74,8 @@
 	}
 	}
 	@mixin toggle-switch {
-			.on-off-choice {
-			margin-left: 10px
+		.on-off-choice {
+		margin-left: 10px
 		}
 		.on-off-switch {
 			display: flex;
@@ -83,6 +87,7 @@
 			margin-top: 10px;
 			margin-right: 25px;
 			background-color: $toggleChev;
+			border: 2px solid #dcdbd7;
 			border-radius: 30px;
 			padding: 5px;
 			transition: 300ms ease-in-out;
@@ -96,9 +101,10 @@
 			color: $white;
 		}
 		.toggle-btn .inner-circle {
-			width: 25px;
-			height: 25px;
+			width: 23px;
+			height: 23px;
 			background-color: $white;
+			border: 2px solid #dcdbd7;
 			border-radius: 50%;
 			margin-left: 3px;
 			transition: 300ms ease-in-out;

@@ -15,6 +15,9 @@
 	width: 40px;
 	padding: 1em;
 }
+#main-nav li a .icon-nav img:active {
+	color: #fff;
+}
 #main-nav li a .icon-nav:hover {
 	color: $white;
 	border-bottom: 3px solid $navBrdr;
