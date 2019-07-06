@@ -20,24 +20,13 @@
 						1300
 					],
 					backgroundColor: [
-						'rgba(226, 227, 246, 0.7)',
-						'rgba(226, 227, 246, 0.7)',
-						'rgba(226, 227, 246, 0.7)',
-						'rgba(226, 227, 246, 0.7)',
-						'rgba(226, 227, 246, 0.7)',
-						'rgba(226, 227, 246, 0.7)',
-						'rgba(226, 227, 246, 0.7)',
-						'rgba(226, 227, 246, 0.7)',
-						'rgba(226, 227, 246, 0.7)',
-						'rgba(226, 227, 246, 0.7)',
-						'rgba(226, 227, 246, 0.7)'
+						'rgba(226, 227, 246, 0.5)',
 					],
-
 					pointBorderColor: '#7377bf',
 					pointBackgroundColor: '#fff',
 					borderWidth: 1,
-					pointBorderWidth: 10,
-					pointHoverBorderWidth: 10,
+					pointBorderWidth: 2,
+					pointHoverBorderWidth: 2,
 					borderColor: '#a9ace5',
 					lineTension: 0
 				
@@ -59,23 +48,13 @@
 					],
 					hidden:true,
 					backgroundColor: [
-						'rgba(0, 179, 0, 0.7)',
-						'rgba(0, 179, 0, 0.7)',
-						'rgba(0, 179, 0, 0.7)',
-						'rgba(0, 179, 0, 0.7)',
-						'rgba(0, 179, 0, 0.7)',
-						'rgba(0, 179, 0, 0.7)',
-						'rgba(0, 179, 0, 0.7)',
-						'rgba(0, 179, 0, 0.7)',
-						'rgba(0, 179, 0, 0.7)',
-						'rgba(0, 179, 0, 0.7)',
-						'rgba(0, 179, 0, 0.7)',
+						'rgba(0, 179, 0, 0.5)',		
 					],
 					pointBorderColor: '#7377bf',
 					pointBackgroundColor: '#fff',
 					borderWidth: 1,
-					pointBorderWidth: 10,
-					pointHoverBorderWidth: 10,
+					pointBorderWidth: 2,
+					pointHoverBorderWidth: 2,
 					borderColor: '#a9ace5',
 					lineTension: 0
 		},
@@ -96,26 +75,15 @@
 					],
 					hidden:true,
 					backgroundColor: [
-						'rgba(255, 255, 153, 0.7)',
-						'rgba(255, 255, 153, 0.7)',
-						'rgba(255, 255, 153, 0.7)',
-						'rgba(255, 255, 153, 0.7)',
-						'rgba(255, 255, 153, 0.7)',
-						'rgba(255, 255, 153, 0.7)',
-						'rgba(255, 255, 153, 0.7)',
-						'rgba(255, 255, 153, 0.7)',
-						'rgba(255, 255, 153, 0.7)',
-						'rgba(255, 255, 153, 0.7)',
-						'rgba(255, 255, 153, 0.7)'
+						'rgba(255, 255, 153, 0.5)',
 					],
 					pointBorderColor: '#7377bf',
 					pointBackgroundColor: '#fff',
 					borderWidth: 1,
-					pointBorderWidth: 10,
-					pointHoverBorderWidth: 10,
+					pointBorderWidth: 2,
+					pointHoverBorderWidth: 2,
 					borderColor: '#a9ace5',
 					lineTension: 0
-			
 		},
 		{
 				label: 'Monthly',
@@ -134,23 +102,13 @@
 					],
 					hidden:true,
 					backgroundColor: [
-						'rgba(255, 102, 0, 0.7)',
-						'rgba(255, 102, 0, 0.7)',
-						'rgba(255, 102, 0, 0.7)',
-						'rgba(255, 102, 0, 0.7)',
-						'rgba(255, 102, 0, 0.7)',
-						'rgba(255, 102, 0, 0.7)',
-						'rgba(255, 102, 0, 0.7)',
-						'rgba(255, 102, 0, 0.7)',
-						'rgba(255, 102, 0, 0.7)',
-						'rgba(255, 102, 0, 0.7)',
-						'rgba(255, 102, 0, 0.7)'
+						'rgba(255, 102, 0, 0.5)',
 					],
 					pointBorderColor: '#7377bf',
 					pointBackgroundColor: '#fff',
 					borderWidth: 1,
-					pointBorderWidth: 10,
-					pointHoverBorderWidth: 10,
+					pointBorderWidth: 2,
+					pointHoverBorderWidth: 2,
 					borderColor: '#a9ace5',
 					lineTension: 0
 
@@ -202,7 +160,8 @@ var dailyTraffic = new Chart(barChart, {
 				'rgba(115, 119, 191)',
 				'rgba(115, 119, 191)'
 			],
-			borderColor: '#a9ace5'
+			borderColor: '#a9ace5',
+			borderCapStyle: 'round'
 		}]
 		
 	},
@@ -257,7 +216,12 @@ var mobileTraffic = new Chart(pieChart, {
 		},
 
 		legend:{
-			position: 'right'
+			position: 'right',
+			labels: {
+               boxWidth: 19,
+               fontSize: 18,
+               padding: 18
+            }
 		}
 	}
 	

@@ -19,16 +19,20 @@ document.getElementById('user').addEventListener('keyup', function () {
 			var result = document.createElement('li');
 			result.innerHTML = results[i];
 			resultsElement.appendChild(result);
+			result.addEventListener('click', function() {
+				var user = document.getElementById('user');
+				user.value = results[i]
+
+			})
 		}
 		resultsElement.style.display = 'block'
 	} else {
 		resultsElement.style.display = 'none';
 	}
-		
-})
 
+});
 document.getElementById('user').addEventListener('blur', function () {
 	var resultsElement = document.getElementById('autoCompleteResults');
-	resultsElement.style.display = 'none';
+	console.log(resultsElement.style.display = 'none');
 
-})
+});

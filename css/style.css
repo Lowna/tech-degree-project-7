@@ -581,6 +581,10 @@ fieldset {
   transition: 0.5s ease-in;
 }
 
+#autoComplete ol {
+  list-style: none;
+}
+
 .settings-container {
   display: flex;
   flex-direction: column;
