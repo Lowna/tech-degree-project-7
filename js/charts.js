@@ -2,53 +2,53 @@
 function drawNewChart() {
 	var lineChart = document.getElementById('webTraffic').getContext('2d');
 	return new Chart(lineChart, {
-				type: 'line',
-				data: {
-					labels: ['12am', '3am', '6am', '9am', '12pm', '3pm', '6pm', '9pm'],
-					datasets: [
-						{
-							data: [
-								100,
-								50,
-								200,
-								100, 
-								300,
-								150, 
-								400,
-								75, 
-							],
-							backgroundColor: [
-								'rgba(226, 227, 246, 0.5)',
-							],
-							pointBorderColor: '#7377bf',
-							pointBackgroundColor: '#fff',
-							borderWidth: 1,
-							pointBorderWidth: 2,
-							pointHoverBorderWidth: 2,
-							borderColor: '#a9ace5',
-							lineTension: 0
-					
-						}
-					]
-				},		
-				options: {
-					maintainAspectRatio: false,
-					responsive:true,
-					aspectRatio:1,
-					scales: {
-						yAxes: [
-							{
-								ticks: {
-									beginAtZero: true
-			          }
-	            }
-	          ]
-		      },
+		type: 'line',
+		data: {
+			labels: ['12am', '3am', '6am', '9am', '12pm', '3pm', '6pm', '9pm'],
+			datasets: [
+				{
+					data: [
+						100,
+						50,
+						200,
+						100, 
+						300,
+						150, 
+						400,
+						75, 
+					],
+					backgroundColor: [
+						'rgba(226, 227, 246, 0.5)',
+					],
+					pointBorderColor: '#7377bf',
+					pointBackgroundColor: '#fff',
+					borderWidth: 1,
+					pointBorderWidth: 2,
+					pointHoverBorderWidth: 2,
+					borderColor: '#a9ace5',
+					lineTension: 0
+			
+				}
+			]
+		},		
+		options: {
+			maintainAspectRatio: false,
+			responsive:true,
+			aspectRatio:1,
+			scales: {
+				yAxes: [
+					{
+						ticks: {
+							beginAtZero: true
+	          			}
+	    			}
+	  			]
+	  		},
 
-					legend: {
-						display: false
-					}
-	   	 	}
+			legend: {
+				display: false
+			}
+	 	}
 	});
 
 }
@@ -82,46 +82,50 @@ chartTimes.forEach(function(e) {
 		} else if (timeOption == 'daily') {
 			updateChart(
 				chart, 
-				['Mon', '3am', '6am', '9am', '12pm', '3pm', '6pm', '9pm'], 
+				['Sun', 'Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat'], 
 				[
 					200,
 					50,
-					200,
-					100, 
-					300,
-					150, 
 					400,
-					75
+					100, 
+					500,
+					150, 
+					600,
+					175
 				]
 			);
 		} else if (timeOption == 'weekly') {
 			updateChart(
 				chart, 
-				['12am', '3am', '6am', '9am', '12pm', '3pm', '6pm', '9pm'], 
+				['1', '2', '3', '4', '5', '6', '7'], 
 				[
-					100,
-					50,
-					200,
+					1100,
+					150,
+					1200,
 					100, 
-					300,
+					1300,
 					150, 
-					400,
+					1400,
 					75
 				]
 			);
-		} else if (timeOption == 'Monthly') {
+		} else if (timeOption == 'monthly') {
 			updateChart(
 				chart, 
-				['12am', '3am', '6am', '9am', '12pm', '3pm', '6pm', '9pm'], 
+				['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'], 
 				[
-					100,
-					50,
-					200,
-					100, 
-					300,
+					1100,
+					150,
+					1200,
+					1100, 
+					1300,
 					150, 
-					400,
-					75
+					1400,
+					175,
+					500,
+					1200,
+					750,
+					1000
 				]
 			);
 		} 
