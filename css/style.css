@@ -271,7 +271,6 @@ header {
 #dropdown {
   background: #7377bf;
   color: #fff;
-  width: 20%;
   padding: 1.5em;
   border: 1px solid #fff;
   display: none;
@@ -292,6 +291,11 @@ header {
   cursor: pointer;
 }
 
+@media (min-width: 768px) {
+  #dropdown {
+    width: 20%;
+  }
+}
 .social-widget {
   background: #fbfbfb;
   border: 1px solid #d1d1d1;

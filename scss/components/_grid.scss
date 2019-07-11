@@ -60,7 +60,7 @@ header {
 #dropdown {
 	background: $sendSaveAlert;
 	color: $white;
-	width: 20%;
+	
 	padding: 1.5em;
 	border: 1px solid $white;
 	display: none;
@@ -78,6 +78,11 @@ header {
 			transition: 0.5s ease-in;
 			cursor: pointer;
 	}
+	}
+}
+@media (min-width: 768px) {
+	#dropdown {
+		width: 20%;
 	}
 }
 //notification dropdown/////////////////////////////////////////////////////////////////////////////////
