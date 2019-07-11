@@ -69,7 +69,6 @@ header {
 		padding-right: 2em;
 		margin: auto;
 		li {
-			width: 100%;
 			list-style: none;
 			padding: 1em;
 			border-bottom: 2px solid $white;
@@ -77,6 +76,7 @@ header {
 	li:hover {
 			background: $btn-hover;
 			transition: 0.5s ease-in;
+			cursor: pointer;
 	}
 	}
 }

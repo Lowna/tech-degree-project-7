@@ -282,7 +282,6 @@ header {
   margin: auto;
 }
 #dropdown ol li {
-  width: 100%;
   list-style: none;
   padding: 1em;
   border-bottom: 2px solid #fff;
@@ -290,6 +289,7 @@ header {
 #dropdown ol li:hover {
   background: #8c8840;
   transition: 0.5s ease-in;
+  cursor: pointer;
 }
 
 .social-widget {
@@ -461,6 +461,31 @@ header {
     transition: 300ms ease-out;
   }
 }
+#chartNav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+#chartNav ul li {
+  color: #8f8f8f;
+  padding: 0.5em;
+  margin: 1em;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+#chartNav ul li:hover {
+  background: #81c98f;
+  color: #fff;
+  transition: 500ms ease-in;
+}
+
+@media (min-width: 768px) {
+  #chartNav ul {
+    justify-content: flex-end;
+  }
+}
 .on-off-choice {
   margin-left: 10px;
 }
@@ -522,6 +547,7 @@ header {
   margin: 0.5em;
   text-transform: uppercase;
   background: #b2b2b2;
+  cursor: pointer;
 }
 
 #save {
@@ -533,6 +559,7 @@ header {
   margin: 0.5em;
   text-transform: uppercase;
   background: #7377bf;
+  cursor: pointer;
 }
 
 #cancel:hover {
@@ -581,8 +608,22 @@ fieldset {
   transition: 0.5s ease-in;
 }
 
+#messageSubmit, #user, textarea {
+  cursor: pointer;
+}
+
 #autoComplete ol {
   list-style: none;
+}
+
+#inputRequired,
+#textfieldRequired {
+  display: none;
+  padding: 1em;
+  text-align: right;
+  color: #F31431;
+  font-size: 12px;
+  font-weight: 900;
 }
 
 .settings-container {
@@ -602,6 +643,7 @@ fieldset {
 .bell {
   width: 30px;
   margin-bottom: 10px;
+  cursor: pointer;
 }
 
 #shakeBell:hover {

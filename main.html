@@ -59,6 +59,14 @@
 				<p id="alertClose"><i class="fas fa-times"></i></p>
 			</div>
 			<h3 class="section-title">Traffic</h3>
+			<nav id="chartNav">
+				<ul>
+					<li class="time-control" id="hourly">Hourly</li>
+					<li class="time-control" id="daily">Daily</li>
+					<li class="time-control" id="weekly">Weekly</li>
+					<li class="time-control" id="monthly">Monthly</li>
+				</ul>
+			</nav>
 			<div class="web-chart-container">
 				<canvas id="webTraffic" width='100' ></canvas>
 			</div>
@@ -219,16 +227,18 @@
 				</section>
 				<section class="base-section" id="message-user">
 					<h3 class="section-title">Message User</h3>
-					<form id="messageUser" action="index.html" method="message">
+					<form id="messageUser" action="#" method="message">
 						<fieldset class="message-user">
 							<div class="form-container">
-								<input type="text" id="user" placeholder="search for user" required>
+								<div id="inputRequired">Name Required!</div>
+								<input type="text" id="user" placeholder="search for user">
 								<div id="autoComplete">
 									<ol id="autoCompleteResults">
 									</ol>
 								</div>
-								 <textarea name="user_topics" id="topic" cols="30" rows="10" placeholder="message for user" required></textarea>
-								 <button type="submit">send</button>
+								<div id="textfieldRequired">Message Required!</div>
+								 <textarea name="user_topics" id="topic" cols="30" rows="10" placeholder="message for user"></textarea>
+								 <button id="messageSubmit" type="submit">send</button>
 							</div>
 						</fieldset>
 					</form>
@@ -310,5 +320,6 @@
 	<script type="text/javascript" src="js/dropdown.js"></script>
 	<script type="text/javascript" src="js/autoComplete.js"></script>
 	<script type="text/javascript" src="js/charts.js"></script>
+	<script type="text/javascript" src="js/required.js"></script>
 </body>
 </html>

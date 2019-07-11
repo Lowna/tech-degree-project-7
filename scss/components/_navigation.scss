@@ -1,3 +1,4 @@
+//site navigation/////////////////////////////////////////////////////////////////////////////////////////
 #main-nav {
 	display: flex;
 	flex-direction: row;
@@ -32,5 +33,30 @@
 		border-right: 0;
 		border-radius: 3px;
 		transition: 300ms ease-out;
+	}
+}
+//Chart navigation/////////////////////////////////////////////////////////////////////////////////////////
+#chartNav ul {
+	display: flex;
+	justify-content: center;
+	list-style: none;
+	
+}
+#chartNav ul li {
+	color: $chart-nav;
+	padding: 0.5em;
+	margin: 1em;
+	border-radius: 25px;
+	cursor: pointer;
+	
+}
+#chartNav ul li:hover {
+	background: $chart-nav-hover;
+	color: $white;
+	transition: 500ms ease-in;
+}
+@media (min-width: 768px) {
+	#chartNav ul {
+		justify-content: flex-end;
 	}
 }

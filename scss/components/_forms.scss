@@ -5,8 +5,20 @@ fieldset {
 .form-container {
 	@include form;
 }
+#messageSubmit, #user, textarea {
+	cursor: pointer;
+}
 #autoComplete ol {
 	list-style: none;
+}
+#inputRequired,
+#textfieldRequired {
+	display: none;
+	padding: 1em;
+	text-align: right;
+	color: $alert;
+	font-size: 12px;
+	font-weight: 900;
 }
 //form////////////////////////////////////////////////////////////////////////////////
 

@@ -1,137 +1,131 @@
-	//this is the line chart//////////////////////////////////////////////////////////////////////////////////////////////////
+//this function creates a new chart and returns a reference to////////
+function drawNewChart() {
 	var lineChart = document.getElementById('webTraffic').getContext('2d');
-		var webTraffic = new Chart(lineChart, {
-			type: 'line',
-			data: {
-				labels: ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31'],
-				datasets: [{
-					label: 'Hourly',
-					data: [
-						300,
-						1000,
-						600,
-						1200, 
-						1600,
-						1100, 
-						1400,
-						1300, 
-						600,
-						800, 
-						1300
-					],
-					backgroundColor: [
-						'rgba(226, 227, 246, 0.5)',
-					],
-					pointBorderColor: '#7377bf',
-					pointBackgroundColor: '#fff',
-					borderWidth: 1,
-					pointBorderWidth: 2,
-					pointHoverBorderWidth: 2,
-					borderColor: '#a9ace5',
-					lineTension: 0
-				
-			},
-		{
-				label: 'Daily',
-				data: [
-						500,
-						1200,
-						800,
-						1400, 
-						1800,
-						1300, 
-						1600,
-						1500, 
-						800,
-						1000, 
-						1500
-					],
-					hidden:true,
-					backgroundColor: [
-						'rgba(0, 179, 0, 0.5)',		
-					],
-					pointBorderColor: '#7377bf',
-					pointBackgroundColor: '#fff',
-					borderWidth: 1,
-					pointBorderWidth: 2,
-					pointHoverBorderWidth: 2,
-					borderColor: '#a9ace5',
-					lineTension: 0
-		},
-		{
-				label: 'Weekly',
-				data: [
-						2500,
-						1200,
-						1800,
-						1400, 
-						2100,
-						700, 
-						1600,
-						200, 
-						800,
-						1000, 
-						1500
-					],
-					hidden:true,
-					backgroundColor: [
-						'rgba(255, 255, 153, 0.5)',
-					],
-					pointBorderColor: '#7377bf',
-					pointBackgroundColor: '#fff',
-					borderWidth: 1,
-					pointBorderWidth: 2,
-					pointHoverBorderWidth: 2,
-					borderColor: '#a9ace5',
-					lineTension: 0
-		},
-		{
-				label: 'Monthly',
-				data: [
-						2000,
-						2400,
-						1700,
-						1200, 
-						1500,
-						1000, 
-						2350,
-						1800, 
-						1475,
-						975, 
-						2300
-					],
-					hidden:true,
-					backgroundColor: [
-						'rgba(255, 102, 0, 0.5)',
-					],
-					pointBorderColor: '#7377bf',
-					pointBackgroundColor: '#fff',
-					borderWidth: 1,
-					pointBorderWidth: 2,
-					pointHoverBorderWidth: 2,
-					borderColor: '#a9ace5',
-					lineTension: 0
+	return new Chart(lineChart, {
+				type: 'line',
+				data: {
+					labels: ['12am', '3am', '6am', '9am', '12pm', '3pm', '6pm', '9pm'],
+					datasets: [
+						{
+							data: [
+								100,
+								50,
+								200,
+								100, 
+								300,
+								150, 
+								400,
+								75, 
+							],
+							backgroundColor: [
+								'rgba(226, 227, 246, 0.5)',
+							],
+							pointBorderColor: '#7377bf',
+							pointBackgroundColor: '#fff',
+							borderWidth: 1,
+							pointBorderWidth: 2,
+							pointHoverBorderWidth: 2,
+							borderColor: '#a9ace5',
+							lineTension: 0
+					
+						}
+					]
+				},		
+				options: {
+					maintainAspectRatio: false,
+					responsive:true,
+					aspectRatio:1,
+					scales: {
+						yAxes: [
+							{
+								ticks: {
+									beginAtZero: true
+			          }
+	            }
+	          ]
+		      },
 
-				}
-			]
-		},
-/////////////////////////////////////////////////////////////////////////////			
-			options: {
-				maintainAspectRatio: false,
-				responsive:true,
-				aspectRatio:1,
-				scales: {
-					yAxes: [{
-						ticks: {
-							beginAtZero: true
-		                }
-            	}]
-	        },
+					legend: {
+						display: false
+					}
+	   	 	}
+	});
 
-			legend: {
-				display: true
-			}
-   	 }
+}
+// update chart
+function updateChart(chart, labels, data) {
+    chart.data.labels = labels;
+    chart.data.datasets[0].data = data;
+    chart.update();
+}
+var chart = drawNewChart();
+var chartTimes = document.querySelectorAll('.time-control');
+
+chartTimes.forEach(function(e) {
+	e.addEventListener('click', function() {
+		var timeOption = this.getAttribute('id');
+		if (timeOption == 'hourly') {
+			updateChart(
+				chart, 
+				['12am', '3am', '6am', '9am', '12pm', '3pm', '6pm', '9pm'], 
+				[
+					100,
+					50,
+					200,
+					100, 
+					300,
+					150, 
+					400,
+					75
+				]
+			);
+		} else if (timeOption == 'daily') {
+			updateChart(
+				chart, 
+				['Mon', '3am', '6am', '9am', '12pm', '3pm', '6pm', '9pm'], 
+				[
+					200,
+					50,
+					200,
+					100, 
+					300,
+					150, 
+					400,
+					75
+				]
+			);
+		} else if (timeOption == 'weekly') {
+			updateChart(
+				chart, 
+				['12am', '3am', '6am', '9am', '12pm', '3pm', '6pm', '9pm'], 
+				[
+					100,
+					50,
+					200,
+					100, 
+					300,
+					150, 
+					400,
+					75
+				]
+			);
+		} else if (timeOption == 'Monthly') {
+			updateChart(
+				chart, 
+				['12am', '3am', '6am', '9am', '12pm', '3pm', '6pm', '9pm'], 
+				[
+					100,
+					50,
+					200,
+					100, 
+					300,
+					150, 
+					400,
+					75
+				]
+			);
+		} 
+	});
 });
 //end line chart/////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -183,6 +177,7 @@ var dailyTraffic = new Chart(barChart, {
 	
 });
 //end bar chart/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 //this is the pie chart//////////////////////////////////////////////////////////////////////////////////////////////////
 var pieChart = document.getElementById('mobileTraffic').getContext('2d');

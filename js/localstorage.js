@@ -3,7 +3,6 @@ var profilePublic = document.getElementById('profilePublic');
 var timezoneOffset = document.getElementById('timezone-offset');
 
 window.addEventListener('load', function (event) {
-	console.log(profileEmail)
     if(localStorage.getItem('profileEmail') == 'true') {
     	profileEmail.classList.add('active')
     }
